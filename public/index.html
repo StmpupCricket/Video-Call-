@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Chat - Omegle Clone</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    #video-container { display: flex; flex-wrap: wrap; }
+    video { width: 50%; height: auto; background: #000; }
+    #controls { padding: 10px; background: #f0f0f0; text-align: center; }
+    button { padding: 8px 16px; margin: 0 5px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <div id="video-container">
+    <video id="local-video" autoplay muted></video>
+    <video id="remote-video" autoplay></video>
+  </div>
+  <div id="controls">
+    <button id="start-btn">Start Random Chat</button>
+    <button id="stop-btn" disabled>Stop</button>
+    <button id="mute-btn">Mute</button>
+    <button id="video-off-btn">Turn Video Off</button>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>
